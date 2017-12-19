@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+
+
+
+    {% block body_block %}
+    <h1>Welcome to index!</h1>
+
+    <p>The <a href="{% url 'basic_app:relative' %}">relative</a> site.</p>
+    <p>The <a href="{% url 'basic_app:other' %}">other</a> site.</p>
+    <h2>{{ text|cut_me:' world' }}</h2>
+    <h2>{{ number|add:"99" }}</h2>
+
+    {% endblock %}
